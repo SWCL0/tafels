@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .form {
+            margin-bottom: 10px;
+            font-size: large;
+        }
+        #output {
+            border: 1px black solid;
+            width: 200px;
+            height: 400px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Tafels oefenen</h1>
+        <div class="form">
+            <form>
+                <div>
+                    <label for="invoer">Geef getal voor tafel lijst:</label>
+                    <input type="number" placeholder="10" id="invoer">                    
+                </div>
+                <button type="button" onclick="bereken()">Geef de tafel</button>
+            </form>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script>
+        function bereken() {
+            var getal = document.getElementById("invoer").value;
+            var outputHTML = "";
+            for (let i = 1; i <= 10; i++) {
+                var output = i * getal;
+                outputHTML += i + " x " + getal + " = " + output + "<br/>";
+            }
+            document.getElementById("output").innerHTML = outputHTML;
+        }                
+
+    </script>
+</body>
+</html>
